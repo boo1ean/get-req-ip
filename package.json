@@ -1,0 +1,16 @@
+{
+  "name": "get-request-ip",
+  "version": "1.0.0",
+  "description": "Get request ip skipping private networks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "req",
+    "request",
+    "ip"
+  ],
+  "author": "Egor Gumenyuk <boo1ean0807@gmail.com>",
+  "license": "MIT"
+}
