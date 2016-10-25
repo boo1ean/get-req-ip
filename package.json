@@ -1,5 +1,5 @@
 {
-  "name": "get-request-ip",
+  "name": "get-req-ip",
   "version": "1.0.0",
   "description": "Get request ip skipping private networks",
   "main": "index.js",
