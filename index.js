@@ -1,3 +1,5 @@
+var SUBNET_PREFIX = '::ffff:'
+
 module.exports = function getRequestIp (req) {
 	var ips = (req.headers['x-forwarded-for'] || req.connection.remoteAddress).split(',');
 
@@ -15,6 +17,7 @@ module.exports = function getRequestIp (req) {
 			|| (t1 === 100 && (t2 > 63 && t2 < 128))     // 100.64.0.0/10
 			|| (t1 === 198 && (t2 === 18 || t2 === 19))  // 198.18.0.0/15
 			|| (t1 === 169 && t2 === 254)                // 169.254.0.0/16
+			|| ips[i].substring(0, SUBNET_PREFIX.length) === SUBNET_PREFIX
 		) {
 			continue;
 		}
